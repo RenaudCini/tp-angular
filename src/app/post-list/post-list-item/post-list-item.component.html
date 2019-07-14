@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item': true,
+'list-group-item-success': loveIts > 0,
+'list-group-item-danger': loveIts < 0}">
+<span class="small badge badge-pill badge-secondary float-right">{{date| date:'MM/dd/yy'}} {{date| date:'h'}}h{{date| date:'mm'}}  </span>
+<h4>{{ title }}</h4>
+
+<p>{{content }}</p>
+
+<button class="btn btn-success"
+(click)="onLoveItUp()">love it</button>
+
+<button class="btn btn-danger"
+(click)="onLoveItDown()">don't love it</button>
+
+</li>
